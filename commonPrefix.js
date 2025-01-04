@@ -1,4 +1,4 @@
-var longestCommonPrefix = function (strs) {
+var longest_CommonPrefix = function (strs) {
   let commonPref = "";
   for (let i = 0; i < strs[0].length; i++) {
     let char = strs[0][i];
@@ -14,4 +14,4 @@ var longestCommonPrefix = function (strs) {
 
 strs = ["flower", "flow", "flight"];
 
-console.log(longestCommonPrefix(strs));
+console.log(longest_CommonPrefix(strs));
