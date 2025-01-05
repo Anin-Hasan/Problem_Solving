@@ -1,3 +1,5 @@
+const readline = require("readline");
+
 function selection_sort(arr) {
   let temp = 0;
 
@@ -13,5 +15,13 @@ function selection_sort(arr) {
   return arr;
 }
 
-const arr = [5, 3, 6, 2, 10];
-console.log(selection_sort(arr)); // [2, 3, 5, 6, 10]
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question("Enter numbers separated by commas: ", (input) => {
+  const arr = input.split(",").map(Number);
+  console.log(selection_sort(arr));
+  rl.close();
+});
